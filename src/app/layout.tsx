@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nav } from "@/components/Nav";
-import { DataBanner } from "@/components/DataBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://freeai.today"),
@@ -20,14 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">
-        <Nav />
-        <DataBanner />
-        <main className="flex-1 w-full mx-auto max-w-[1400px] px-4 sm:px-6 py-6">{children}</main>
-        <footer className="border-t border-[var(--border)] mt-10 py-6 text-center text-xs text-[var(--fg-mute)]">
-          FreeAI.today · Community-curated free AI availability · Verify sources before relying on data.
-        </footer>
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

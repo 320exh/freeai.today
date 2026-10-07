@@ -4,12 +4,12 @@
       "count": 2
     }
   },
-  "src/app/admin/page.tsx": {
+  "src/app/(app)/admin/page.tsx": {
     "@typescript-eslint/no-explicit-any": {
       "count": 1
     }
   },
-  "src/app/models/[id]/page.tsx": {
+  "src/app/(app)/models/[id]/page.tsx": {
     "@typescript-eslint/no-explicit-any": {
       "count": 1
     }

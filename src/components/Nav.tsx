@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const LINKS = [
-  { href: "/", label: "Dashboard" },
+  { href: "/dashboard", label: "Dashboard" },
   { href: "/free", label: "Free Right Now" },
   { href: "/models", label: "Models" },
   { href: "/providers", label: "Providers" },
@@ -26,7 +26,7 @@ export function Nav() {
         </Link>
         <nav className="hidden md:flex items-center gap-1 overflow-x-auto scrollbar-thin">
           {LINKS.map((l) => {
-            const active = l.href === "/" ? path === "/" : path.startsWith(l.href);
+            const active = l.href === "/dashboard" ? path === "/dashboard" : path.startsWith(l.href);
             return (
               <Link key={l.href} href={l.href} className={`nav-link ${active ? "active" : ""}`}>
                 {l.label}
@@ -38,7 +38,7 @@ export function Nav() {
       </div>
       <nav className="md:hidden flex items-center gap-1 overflow-x-auto scrollbar-thin px-3 pb-2">
         {LINKS.map((l) => {
-          const active = l.href === "/" ? path === "/" : path.startsWith(l.href);
+          const active = l.href === "/dashboard" ? path === "/dashboard" : path.startsWith(l.href);
           return (
             <Link key={l.href} href={l.href} className={`nav-link ${active ? "active" : ""}`}>
               {l.label}

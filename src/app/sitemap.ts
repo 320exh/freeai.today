@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.SITE_URL ?? "https://freeai.today";
   const out: MetadataRoute.Sitemap = [
-    { url: `${base}/`, changeFrequency: "daily", priority: 1 },
+    { url: `${base}/dashboard`, changeFrequency: "daily", priority: 1 },
     { url: `${base}/models`, changeFrequency: "daily", priority: 0.9 },
     { url: `${base}/providers`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/harnesses`, changeFrequency: "weekly", priority: 0.7 },
